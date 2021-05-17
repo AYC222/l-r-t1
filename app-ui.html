@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+**
+**  Live Video Experience (LiVE)
+**  Copyright (c) 2020-2021 Dr. Ralf S. Engelschall <rse@engelschall.com>
+**  Licensed under GPL 3.0 <https://spdx.org/licenses/GPL-3.0-only>
+**
+-->
+<html>
+    <head>
+        <!-- application title -->
+        <title>LiVE Receiver</title>
+
+        <!-- general meta-information -->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' 'unsafe-inline' 'unsafe-eval' blob:;"/>
+
+        <!-- load dependency: VueJS -->
+        <script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="node_modules/http-vue-loader/src/httpVueLoader.js"></script>
+        <script type="text/javascript" src="node_modules/vue-i18n/dist/vue-i18n.min.js"></script>
+
+        <!-- load dependency: AnimeJS -->
+        <script type="text/javascript" src="node_modules/animejs/lib/anime.min.js"></script>
+
+        <!-- load dependency: Howler -->
+        <script type="text/javascript" src="node_modules/howler/dist/howler.min.js"></script>
+
+        <!-- load dependency: MouseTrap -->
+        <script type="text/javascript" src="node_modules/mousetrap/mousetrap.min.js"></script>
+
+        <!-- load dependency: LESS -->
+        <script>less = { env: "production", logLevel: 0 };</script>
+        <script type="text/javascript" src="node_modules/less/dist/less.min.js"></script>
+
+        <!-- load dependency: FontAwesome -->
+        <link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <script type="text/javascript" src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+        <!-- load dependency: TypoPRO -->
+        <link rel="stylesheet" type="text/css" href="node_modules/typopro-web/web/TypoPRO-SourceSansPro/TypoPRO-SourceSansPro.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/typopro-web/web/TypoPRO-SourceCodePro/TypoPRO-SourceCodePro.css">
+
+        <!-- load dependency: SoundFX -->
+        <script type="text/javascript" src="node_modules/@rse/soundfx/soundfx.browser.js"></script>
+
+        <!-- load dependency: Audio-Node-Suite -->
+        <script type="text/javascript" src="node_modules/audio-node-suite/lib/audio-node-suite.js"></script>
+
+        <!-- load dependency: Cropper -->
+        <link rel="stylesheet" type="text/css" href="node_modules/cropperjs/dist/cropper.min.css">
+        <script type="text/javascript" src="node_modules/cropperjs/dist/cropper.min.js"></script>
+
+        <!-- load dependency: Jimp -->
+        <script type="text/javascript" src="node_modules/jimp/browser/lib/jimp.js"></script>
+
+        <!-- load dependency: HLS.js -->
+        <script type="text/javascript" src="node_modules/hls.js/dist/hls.min.js"></script>
+
+        <!-- load dependency: DayJS -->
+        <script type="text/javascript" src="node_modules/dayjs/dayjs.min.js"></script>
+        <script type="text/javascript" src="node_modules/dayjs/plugin/utc.js"></script>
+        <script>dayjs.extend(window.dayjs_plugin_utc)</script>
+
+        <!-- load dependency: Vue MultiSelect -->
+        <link rel="stylesheet" type="text/css" href="node_modules/vue-multiselect/dist/vue-multiselect.min.css">
+        <script type="text/javascript" src="node_modules/vue-multiselect/dist/vue-multiselect.min.js"></script>
+
+        <!-- load dependency: V-Tooltip -->
+        <script type="text/javascript" src="node_modules/v-tooltip/dist/v-tooltip.min.js"></script>
+
+        <!-- load application -->
+        <link rel="stylesheet" type="text/css" href="app-ui.css"/>
+        <script type="text/javascript" src="app-ui.js"></script>
+    </head>
+    <body>
+        <!-- outmost UI container with initial window -->
+        <div id="ui">
+            <win ref="win" id="win"></win>
+        </div>
+    </body>
+</html>
